@@ -847,6 +847,30 @@ class PygView(object):
                         #feuer!
                         move = d * speedfactor 
                         Ball(self.screen, self.pixelhirn.startpoint+d,  move*50, color=(0,0,200), bossnumber=self.pixelhirn.number, shape="circle", radius=5)   
+                
+                #----- axis moving with joystick--------
+                
+                axes = joystick.get_numaxes()
+                print(self.screen, "Number of axes: {}".format(axes) )
+                #Print.indent()
+        
+                for i in range( axes ):
+                    axis = joystick.get_axis( i )
+                    print(self.screen, "Axis {} value: {:>6.3f}".format(i, axis) )
+                    if i == 1 and axis != 0:
+                        if j == 0:
+                            self.yanniks_ship.forward(150*-axis)
+                        if j == 1:
+                            self.pixelhirn.forward(150*-axis)
+                    if i == 0 and axis != 0:
+                        if j == 0:
+                            self.yanniks_ship.rotate(5*axis)
+                        if j == 1:
+                            self.pixelhirn.rotate(5*axis)
+                #textPrint.unindent()
+                
+                
+                
                 #--- hat moving with joystick-.----
                 
                 
@@ -882,7 +906,7 @@ class PygView(object):
                                 # raumschiff dreht rechts
                             if hat[1] == 1:
                                 self.pixelhirn.forward(150)
-                                # rauschiff vor
+                                # raumschiff vor
                             if hat[1] == -1:
                                 self.pixelhirn.forward(-50)
                                 # raumschiff retour            
