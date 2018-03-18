@@ -799,11 +799,11 @@ class PygView(object):
                                                     8)                                            
                                                     
             # --------- niklas ship laserbeam ------
-            if pressed[pygame.K_z]:
-                e = self.niklas_ship.startpoint + self.niklas_ship.move * 100
-                pygame.draw.line(self.screen, (0,random.randint(190,220),0), 
-                                (self.niklas_ship.startpoint.x, self.niklas_ship.startpoint.y) ,
-                                (e.x, e.y) , 12)
+            #if pressed[pygame.K_z]:
+            #    e = self.niklas_ship.startpoint + self.niklas_ship.move * 100
+            #    pygame.draw.line(self.screen, (0,random.randint(190,220),0), 
+            #                    (self.niklas_ship.startpoint.x, self.niklas_ship.startpoint.y) ,
+            #                    (e.x, e.y) , 12)
             # --------- (auto)fire -------
             #c *= 0.05
             #d *= 0.05
