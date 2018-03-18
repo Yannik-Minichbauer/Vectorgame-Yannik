@@ -3,10 +3,9 @@
 003_static_blit_pretty.py
 static blitting and drawing (pretty version)
 url: http://thepythongamebook.com/en:part2:pygame:step003
-author: horst.jens@spielend-programmieren.at
 licence: gpl, see http://www.gnu.org/licenses/gpl.html
 
-works with pyhton3.4 and python2.7
+works with python 3.4
 
 Blitting a surface on a static position
 Drawing a filled circle into ballsurface.
