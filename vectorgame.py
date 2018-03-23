@@ -838,11 +838,11 @@ class PygView(object):
 
                 for i in range( buttons ):
                     button = joystick.get_button( i )
-                    if i == 0 and button == 1 and j==1 and self.yanniks_ship.hitpoints > 0:
+                    if i == 0 and button == 1 and j==0 and self.yanniks_ship.hitpoints > 0:
                         # feuer!
                         move = c * speedfactor # + self.yanniks_ship.move
                         Ball(self.screen, self.yanniks_ship.startpoint+c, move*50, color=(200,20,0), bossnumber=self.yanniks_ship.number, shape="line")                      
-                    if i == 0 and button == 1 and j==0 and self.pixelhirn.hitpoints > 0:
+                    if i == 0 and button == 1 and j==1 and self.pixelhirn.hitpoints > 0:
                         #feuer!
                         move = d * speedfactor 
                         Ball(self.screen, self.pixelhirn.startpoint+d,  move*50, color=(0,0,200), bossnumber=self.pixelhirn.number, shape="circle", radius=5)   
